@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/kzt-base-style.css" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/slick/slick.css" />
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- /google-font -->
+    <title>Vitrines</title>
+  </head>
+  <body class="kzt-body">
+    <header>
+      <div class="header">
+        <div><b>Kazanto</b> - Vitrine</div>
+        <div>Cada detalhe, uma surpresa</div>
+      </div>
+      
+      <h1 class="main-title">Pesquisa e impressão</h1>
+    </header>
+    <main>
+        
+        <div class="kzt-shell">
+            <form class="kzt-filters">
+                <p class="kzt-filters__branch-title">Filial:</p>
+                <select class="kzt-filters__branch-select kzt-filters__box" id="codfilial" name="codfilial" placeholder="Filial">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option selected="selected" value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <input class="kzt-filters__multi-codprod kzt-filters__box"
+                pattern="[0-9,]+(?<!,)$" type="text" id="codprod" name="codprod" placeholder="codprod,codprod..." />
+                <button class="kzt-filters__search-button" type="submit">Pesquisar</button>
+            </form>
+        </div>
+        <div class="kzt-shell">
+           <div class="kzt-shell kzt-shell-max-width-1024">
+             <div class="kzt-box kzt-box--large">  
+             </div>
+             <div class="kzt-box kzt-box--medium">  
+             </div>
+           </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script defer src="/slick/slick.min.js"></script>
+    <script async src="/js/kzt-base-slick-config.js"></script>
+  </body>
+</html>
