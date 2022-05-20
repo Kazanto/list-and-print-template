@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/kzt-base-style.css" />
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/slick/slick.css" />
+    <link rel="stylesheet" href="styles/kzt-base-style.css" />
+    <link rel="stylesheet" href="styles/list-and-print-1.css" />
+    <link rel="stylesheet" href="styles/kzt-reset.css" />
+    <link rel="stylesheet" href="slick/slick.css" />
     <!-- google-font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,36 +24,63 @@
         <div><b>Kazanto</b> - Vitrine</div>
         <div>Cada detalhe, uma surpresa</div>
       </div>
-      
       <h1 class="main-title">Pesquisa e impressão</h1>
     </header>
     <main>
-        
-        <div class="kzt-shell">
-            <form class="kzt-filters">
-                <p class="kzt-filters__branch-title">Filial:</p>
-                <select class="kzt-filters__branch-select kzt-filters__box" id="codfilial" name="codfilial" placeholder="Filial">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option selected="selected" value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-                <input class="kzt-filters__multi-codprod kzt-filters__box"
-                pattern="[0-9,]+(?<!,)$" type="text" id="codprod" name="codprod" placeholder="codprod,codprod..." />
-                <button class="kzt-filters__search-button" type="submit">Pesquisar</button>
-            </form>
+      <div class="kzt-shell">
+        <form class="kzt-filters">
+          <p class="kzt-filters__branch-title">Filial:</p>
+          <select
+            class="kzt-filters__branch-select kzt-filters__box"
+            id="codfilial"
+            name="codfilial"
+            placeholder="Filial"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option selected="selected" value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <input
+            class="kzt-filters__multi-codprod kzt-filters__box"
+            pattern="[0-9,]+(?<!,)$"
+            type="text"
+            id="codprod"
+            name="codprod"
+            placeholder="codprod,codprod..."
+          />
+          <button class="kzt-filters__search-button" type="submit">
+            Pesquisar
+          </button>
+        </form>
+      </div>
+      <div class="kzt-shell">
+        <div class="kzt-shell kzt-shell-max-width-1024">
+          <div class="kzt-box kzt-box--large"></div>
+          <div id="list-and-print-box#1" class="kzt-box kzt-box--medium"></div>
+          </div>
         </div>
-        <div class="kzt-shell">
-           <div class="kzt-shell kzt-shell-max-width-1024">
-             <div class="kzt-box kzt-box--large">  
-             </div>
-             <div class="kzt-box kzt-box--medium">  
-             </div>
-           </div>
+      </div>
+      <div class="kzt-mobile-menu">
+        <div class="kzt-mobile-menu__button" onclick="openPrintBox2()">
+          <svg
+            class="kzt-mobile-menu__button__svg"
+            width="50px"
+            height="50px"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+          >
+            <path
+              class="kzt-mobile-menu__button__svg__path"
+              d="M57.79,14H52.5V6a4,4,0,0,0-4-4h-33a4,4,0,0,0-4,4V14H6.21A6.22,6.22,0,0,0,0,20.24V46.51a6.22,6.22,0,0,0,6.21,6.22H8.59a1,1,0,0,0,0-2H6.21A4.22,4.22,0,0,1,2,46.51V20.24A4.22,4.22,0,0,1,6.21,16H57.79A4.22,4.22,0,0,1,62,20.24V46.51a4.22,4.22,0,0,1-4.21,4.22H56a1,1,0,0,0,0,2h1.79A6.22,6.22,0,0,0,64,46.51V20.24A6.22,6.22,0,0,0,57.79,14ZM13.5,6a2,2,0,0,1,2-2h33a2,2,0,0,1,2,2v8h-37ZM44,45H20a1,1,0,0,0,0,2H44a1,1,0,0,0,0-2Zm0,7H20a1,1,0,0,0,0,2H44a1,1,0,0,0,0-2ZM8,19.84a2,2,0,1,1-2,2A2,2,0,0,1,8,19.84Zm6.33,0a2,2,0,1,1-2,2A2,2,0,0,1,14.29,19.84Zm6.32,0a2,2,0,1,1-2,2A2,2,0,0,1,20.61,19.84ZM11,62H53V36H11Zm2.4-23.6H50.6v21.2H13.4Z"
+            />
+          </svg>
         </div>
+      </div>
+      <div id="overlay#1" class="overlay --kzt-hidden-all" onclick="closePrintBox()"></div>
     </main>
-    <footer></footer>
-
+    <footer>
+    </footer>
     <script
       type="text/javascript"
       src="//code.jquery.com/jquery-1.11.0.min.js"
@@ -61,7 +89,8 @@
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
-    <script defer src="/slick/slick.min.js"></script>
-    <script async src="/js/kzt-base-slick-config.js"></script>
+    <script defer src="slick/slick.min.js"></script>
+    <script async src="js/kzt-base-slick-config.js"></script>
+    <script async src="js/kzt-menu-mobile.js"></script>
   </body>
 </html>
