@@ -26,12 +26,13 @@
       </div>
       <h1 class="main-title">Pesquisa e impressão</h1>
     </header>
-    <main>
+    <main class="kzt-main">
       <div class="kzt-shell">
         <form class="kzt-filters">
-          <p class="kzt-filters__branch-title">Filial:</p>
+          <div class="kzt-filters-select-shell">
+          <p class="kzt-filters__select-title">Filial:</p>
           <select
-            class="kzt-filters__branch-select kzt-filters__box"
+            class="kzt-filters__select-select kzt-filters__box"
             id="codfilial"
             name="codfilial"
             placeholder="Filial"
@@ -41,6 +42,7 @@
             <option selected="selected" value="3">3</option>
             <option value="4">4</option>
           </select>
+          </div>
           <input
             class="kzt-filters__multi-codprod kzt-filters__box"
             pattern="[0-9,]+(?<!,)$"
@@ -55,9 +57,31 @@
         </form>
       </div>
       <div class="kzt-shell">
-        <div class="kzt-shell kzt-shell-max-width-1024">
+        <div class="kzt-shell kzt-shell--max-width-1024">
           <div class="kzt-box kzt-box--large"></div>
-          <div id="list-and-print-box#1" class="kzt-box kzt-box--medium"></div>
+          <div id="list-and-print-box#1" class="kzt-box kzt-box--medium">
+            <div class="kzt-shell">
+              <form class="kzt-filters">
+                <div class="kzt-filters-select-shell">
+                <p class="kzt-filters__select-title">Impressora:</p>
+                <select
+                  class="kzt-filters__select-select kzt-filters__box"
+                  id="codfilial"
+                  name="codfilial"
+                  placeholder="Filial"
+                >
+                  <option selected="selected" value="1">Samsung M2070 Series</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                </div>
+                <button class="kzt-filters__search-button" type="submit">
+                  Imprimir
+                </button>
+              </form>
+            </div>
+          </div>
           </div>
         </div>
       </div>
