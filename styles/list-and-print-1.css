@@ -4,11 +4,15 @@
   }
 }
 
+.kzt-main {
+  margin-bottom: 81px;
+}
+
 .kzt-box--display-mob {
   position: absolute;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  width: 50%;
+  width: fit-content;
   top: 0;
   left: 0;
   height: 100vh;

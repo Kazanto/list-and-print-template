@@ -28,12 +28,12 @@
 .kzt-shell {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   max-width: 100%;
   margin: 0 10px 50px;
 }
 
-.kzt-shell-max-width-1024 {
+.kzt-shell--max-width-1024 {
   width: 100%;
   max-width: 1024px;
   gap: 30px;
@@ -43,9 +43,14 @@
 .kzt-filters {
   display: flex;
   gap: 10px;
-  justify-content: center;
   align-items: center;
-  height: 30px;
+  justify-content: center;
+}
+
+.kzt-filters-select-shell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .kzt-filters__box {
@@ -67,7 +72,7 @@
   border-radius: 5px;
   color: #ffffff;
   cursor: pointer;
-  height: 100%;
+  height: 30px;
 }
 
 .kzt-box {
@@ -75,8 +80,8 @@
   background: #ffffff;
   box-shadow: 5px 5px 25px rgb(0 0 0 / 70%);
   border-radius: 10px;
-  padding: 50px 50px;
   min-height: 500px;
+  padding: 10px;
 }
 
 .kzt-box.kzt-box--large {
@@ -84,26 +89,23 @@
 }
 
 .kzt-box.kzt-box--medium {
-  flex-grow: 2;
+  width: fit-content;
+  max-width: 350px;
+}
+
+.kzt-box--medium .kzt-filters-select-shell {
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.kzt-box--medium .kzt-filters {
+  flex-flow: column;
+  align-items: unset;
 }
 
 @media (max-width: 1023px) {
   .kzt-filters {
-    width: 400px;
     max-width: 100%;
     flex-wrap: wrap;
-    margin-bottom: 50px;
-  }
-  .kzt-filters :nth-child(1) {
-    order: 2;
-  }
-  .kzt-filters :nth-child(2) {
-    order: 3;
-  }
-  .kzt-filters :nth-child(3) {
-    order: 1;
-  }
-  .kzt-filters :nth-child(4) {
-    order: 4;
   }
 }
