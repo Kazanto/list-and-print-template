@@ -86,6 +86,7 @@
 
 .kzt-box.kzt-box--large {
   flex-grow: 5;
+  max-width: 100%;
 }
 
 .kzt-box.kzt-box--medium {
